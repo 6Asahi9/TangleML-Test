@@ -1,4 +1,5 @@
 #include "include/math/core.hpp"
+#include "math/matrix_ops.hpp"
 using namespace tml;
 
 int main() {
