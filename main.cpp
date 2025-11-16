@@ -1,5 +1,8 @@
 #include "include/math/core.hpp"
 #include "math/matrix_ops.hpp"
+#include "math/broadcasting.hpp"
+#include "math/activations.hpp"
+#include "math/loss.hpp"
 using namespace tml;
 
 int main() {

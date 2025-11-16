@@ -1,5 +1,5 @@
 #pragma once
-#include "math/core.hpp"
+#include "core.hpp"
 
 namespace tml {
 namespace ops {
