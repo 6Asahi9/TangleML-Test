@@ -4,6 +4,7 @@
 
 namespace tml {
     // --------------------------- MSE ---------------------------
+    // MSE =1/n ∑i ​( y_pred​(i)− y_true​(i))^2
 
     double MSELoss::forward(const Matrix& y_true, const Matrix& y_pred) const {
         if (y_true.rows() != y_pred.rows() || y_true.cols() != y_pred.cols())
@@ -19,6 +20,7 @@ namespace tml {
     }
 
     // ---------------------- Cross Entropy ----------------------
+    // CE = −∑​i log( y_pred​ (i, true_class))
 
     // y_true: Nx1 class indices
     // y_pred: NxC probabilities (softmax output)
@@ -46,6 +48,7 @@ namespace tml {
     }
 
     // ------------------ Binary Cross Entropy ------------------
+    // BCE = −(y_log(p) + (1 − y)log(1 − p))
 
     double BinaryCrossEntropyLoss::forward(const Matrix& y_true, const Matrix& y_pred) const {
         if (y_true.rows() != y_pred.rows() || y_true.cols() != y_pred.cols())

@@ -12,12 +12,13 @@ namespace tml {  // short for Tangle-ML , a namespace is like putting your code 
 class Matrix {
 private:
     Eigen::MatrixXd data; //“Matrix of double precision (floating point) numbers”
+    // [tml::Matrix  ----wraps---->  Eigen::MatrixXd]
 
 public:
     // Constructors
-    Matrix(); //Empty matrix, nothing inside
-    Matrix(size_t rows, size_t cols); //Creates a zero matrix with those dimensions
-    Matrix(const Eigen::MatrixXd& mat); //Wraps around an existing Eigen matrix
+    Matrix(); //Empty matrix, nothing inside [EMPTY]
+    Matrix(size_t rows, size_t cols); //Creates a zero matrix with those dimensions [BY GIVING ROWS + COLS]
+    Matrix(const Eigen::MatrixXd& mat); //Wraps around an existing Eigen matrix [BY GIVING AN EXISTING EIGEN MATRIX]
     //you’re passing a reference (&) to a matrix (to avoid copying big data)
 
     // Basic info
@@ -65,3 +66,14 @@ public:
 };
 
 } // namespace tml
+
+// ✅ 3. What does our class return?
+// It returns:
+// sizes (rows, cols)
+// operator() = element access
+// arithmetic results: Matrix + Matrix → Matrix
+// matrix multiplication: Matrix * Matrix → Matrix
+// transpose, identity
+// and MOST importantly:
+// Eigen::MatrixXd& raw();
+// const Eigen::MatrixXd& raw() const;
