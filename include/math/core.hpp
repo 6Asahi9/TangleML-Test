@@ -47,7 +47,10 @@ public:
     // Arithmetic
     Matrix operator-(const Matrix& other) const;
     Matrix operator+(const Matrix& other) const;
-    Matrix operator*(double scalar) const;
+    Matrix operator*(double scalar) const; // A.operator*(B);
+    // Which secretly means:
+    // operator*( A , B )
+    
     friend Matrix operator*(double scalar, const Matrix& m);
     //     Overloads +, -, *.
     // Makes your Matrix behave like normal math.
