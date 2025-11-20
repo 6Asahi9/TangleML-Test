@@ -56,5 +56,5 @@ Matrix Broadcasting::divide(const Matrix& A, const Matrix& B) {
     return Matrix(A.raw().array() / B2.raw().array());
 }
 
-} // namespace ops
-} // namespace tml
+} 
+} 
